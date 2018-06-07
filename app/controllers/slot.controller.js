@@ -143,3 +143,10 @@ exports.delete = (req, res) => {
         });
 
 };
+
+exports.deleteAll = (req, res) => {
+    Slot.collection.drop();
+    return res.status(200).send({
+        message: "All Data Deleted.."
+    });
+}

@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const cors = require('cors')
 const dbConfig = require('./config/database.config.js');
 const mongoose = require('mongoose');
+// mongoose.Promise = require('bluebird');
 mongoose.Promise = global.Promise;
 
 const app = express();
